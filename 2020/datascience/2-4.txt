@@ -1,0 +1,3 @@
+Python programming
+This lecture is python programming language
+One Two Three Four Five Six Seven Eight Nine Ten

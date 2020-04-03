@@ -1,0 +1,10 @@
+{
+	"title" : "frozen",
+	"genre" : "animation",
+	"actor" : [
+		{ "name" : "elsa", "gender" : "f" },
+		{ "name" : "hans", "gender" : "m" },
+		{ "name" : "anna", "gender" : "f" },
+		{ "name" : "olaf", "gender" : "n" }
+	]
+}

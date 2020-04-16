@@ -1,0 +1,6 @@
+/* CSS3 스타일 시트 작성 */
+body { background-color : mistyrose; }
+h3 { color : blue; font-size : 30px; }
+hr { border : 5px solid red; }
+p { color : blue; }
+span { background-color : yellow; font-size : 20px; }

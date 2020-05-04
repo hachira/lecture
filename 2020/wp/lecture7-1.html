@@ -1,0 +1,102 @@
+<!doctype html>
+<!-- 웹폼을 이용해서 간단한 로그인 폼 만들기 -->
+<html>
+<head><title>로그인 폼</title></head>
+<body>
+<h3>로그인 폼</h3>
+<hr>
+<form name="login" method="get" 
+  action="https://search.naver.com/search.naver">
+
+  지역 <input type="text" list="continent">
+  나라 <input type="text" list="country"><br>
+  <datalist id="continent">
+  <option value="아시아">
+  <option value="유럽">
+  <option value="아메리카">
+  </datalist>
+  <datalist id="country">
+  <option value="한국">
+  <option value="일본">
+  <option value="이태리">
+  </datalist>
+  <hr>
+  
+  <!-- checkbox & radio button -->
+  여행 목적 : 
+  <input type="checkbox" value="1">관광
+  <input type="checkbox" value="2">업무
+  <input type="checkbox" value="3">기타<br>
+  여행 인원 :
+  <input type="radio" name="pnum" value="1" checked>1 명
+  <input type="radio" name="pnum" value="2">2 명
+  <input type="radio" name="pnum" value="3">3 명 이상<br>
+  <hr>
+  
+  <!-- combo box -->
+  수화물 무게 : 
+  <select name="bag">
+  <option value="1">5kg이하</option>
+  <option value="2" selected>5kg~10kg</option>
+  <option value="3">10kg초과</option>
+  </select>
+  <hr>
+  
+  <!-- label 이용 -->
+  <label>여행자 1 : <input type="text"></label><br>
+  <label for="pass2">여행자 2 : </label>
+  <input type="text" id="pass2">
+  <hr>
+  
+  <!-- 색 선택하기 -->
+  선호하는 여행 깃발 색 : <input type="color" value="#3030FF">
+  <hr>
+  
+  <!-- 시간 정보 표시 -->
+  여행 일자 :
+  <input type="date" value="2020-04-30">
+  <input type="time" value="12:00">
+  <hr>
+  
+  <!-- 스핀과 슬라이드 -->
+  현재 기온 : <input type="number" min="10.0" max="40.0" step="0.5"
+  value="22.5"><br>
+  체온 설정 : <input type="range" min="35.0" max="42.0" list="rvalue"
+  value="36.5">
+  <datalist id="rvalue">
+  <option value="36.0" label="low">
+  <option value="36.5" label="normal">
+  <option value="37.0" label="high">
+  </datalist>
+  <hr>
+
+  <!-- 간단한 로그인 폼 -->
+  <table>
+  <tr><td>사용자 아이디</td>
+  <td><input type="text" id="login" placeholder="로그인"></td></tr>
+  <tr><td>비밀 번호</td>
+  <td><input type="password" id="Pass" placeholder="암호"></td></tr>
+  <tr><td>이메일 주소</td>
+  <td><input type="email" placeholder="이메일"></td></tr>
+  <tr><td>단순한 버튼</td><td><input type="button" value="버튼"></td></tr>
+  </table>
+  <hr>
+  
+  <!-- 그룹핑 -->
+  <fieldset>
+  <legend>체크 사항</legend>
+  <input type="checkbox">사용자 계약에 동의하십니까?</br>
+  <input type="checkbox">유류할증료에 대해 동의합니까?</br>
+  </fieldset>
+  <hr>
+
+  <!-- textarea -->
+  <textarea cols="50" rows="5">입력</textarea>
+  <hr>
+  
+  <!-- buttons -->
+  <input type="submit" value="전송">
+  <input type="reset" value="초기화">
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>position property</title>
+<style>
+div {
+	display : inline-block;
+	height : 50px;
+	width : 50px;
+	border : 1px solid lightgray;
+	text-align : center;
+	color : white;
+	background : blue;
+}
+#down:hover {
+	position : relative;
+	left : 20px;
+	top : 20px;
+	background : red;
+}
+#up:hover {
+	position : relative;
+	right : 20px;
+	bottom : 20px;
+	background : green;
+}
+</style>
+</head>
+<body>
+<h3>relative position test</h3>
+<hr>
+<div id="down">D</div>
+<div>o</div>
+<div>n</div>
+<div>g</div>
+<div>G</div>
+<div>u</div>
+<div>k</div>
+<div>_</div>
+<div id="up">U</div>
+<div>n</div>
+<div>i</div>
+<div>v</div>
+</body>
+</html>

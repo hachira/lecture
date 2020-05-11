@@ -1,6 +1,9 @@
 import pandas as pd
 
-account = pd.read_csv("lecture9-1.csv",
+chunks = pd.read_csv("lecture9-1.csv",
                       header=None,
-                      names=("date", "money")).ffill()
-print(account)
+                      names=("date", "money"),
+                      chunksize=5)
+for it in chunks:
+    print("----------")
+    print(it)

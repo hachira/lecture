@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+<title>Table CSS3</title>
+<style>
+table {
+	border-collapse : collapse;
+}
+td, th {
+	padding : 10px 30px;
+	text-align : center;
+}
+thead {
+	background : darkgray;
+	color : yellow;
+	border-top : 2px solid black;
+	border-bottom : 2px solid black;
+}
+td {
+	border-bottom : 1px solid gray;
+}
+tfoot th {
+	border-top : 2px solid black;
+	border-bottom : 2px solid black;
+}
+tbody tr:nth-child(even) {
+	background : aliceblue;
+}
+tbody tr:hover { background : pink; color : blue; }
+</style>
+</head>
+<body>
+<h3>Table CSS3</h3>
+<hr>
+<table>
+	<thead>
+		<tr><th>이름</th><th>전화번호</th><th>이메일</th></tr>
+	</thead>
+	<tfoot>
+		<tr><th>합</th><th>10</th><th></th></tr>
+	</tfoot>
+	<tbody>
+		<tr><td>홍길동</td><td>001-0011-0111</td><td>abc@def</td></tr>
+		<tr><td>심청</td><td>011-0111-1111</td><td>abc@def</td></tr>		
+		<tr><td>연개소문</td><td>+82 10-0110-1110</td><td>abc@def</td></tr>				
+		<tr><td>이순신</td><td>+82 10-0110-1110</td><td>abc@def</td></tr>				
+		<tr><td>콩쥐</td><td>+82 10-0110-1110</td><td>abc@def</td></tr>				
+		<tr><td>팥쥐</td><td>+82 10-0110-1110</td><td>abc@def</td></tr>				
+	</tbody>
+</table>
+</body>
+</html>

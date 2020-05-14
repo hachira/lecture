@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head><title>document.write()</title></head>
+<body>
+<h3>document.write()</h3>
+<hr>
+<script>
+	document.write("<h3>Welcome!!</h3>");
+	document.write("<h3>환영합니다!!</h3>");
+	document.write("<p>3+5="+(3+5)+"</p>");
+	/*
+	var ret = prompt("이름을 입력하세요", "");
+	if(ret == null) {
+		document.write("<p>취소하셨네요.  다음을 기약해요.</p>");
+	}
+	else if(ret == "") {
+		document.write("<p>아무것도 입력을 안 하셨네요.</p>");
+	}
+	else {
+		document.write("<p>당신의 이름은 "+ret+"입니다.</p>");
+	}
+	*/
+	var ret = confirm("메세지를 보내시겠습니까?");
+	if(ret) {
+		document.write("당신의 사랑의 메세지가 성공적으로 보내졌습니다.");
+	} else {
+		alert("당신의 사랑의 메세지는 삭제되었습니다.");
+	}
+</script>
+</body>
+</html>

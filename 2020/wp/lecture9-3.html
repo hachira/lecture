@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title>Animation</title>
+<style>
+@keyframes textColorAnimation {
+	0% { background: blue; color: yellow; }
+	30% { background: green; color: magenta; }
+	60% { background: red; color: cyan; }
+	100% { background: blue; color: yellow; }
+
+}
+body { font-size : 50px; font-weight : 800; }
+span {
+	animation-name: textColorAnimation;
+	animation-duration: 20s;
+	animation-iteration-count: 10;
+}
+</style>
+<body>
+<h3>Animation</h3>
+<hr>
+<span>RGB Color</span>이 순차적으로 색이 바뀝니다.
+<br>
+</body>

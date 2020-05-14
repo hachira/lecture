@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>Javascript</title>
+</head>
+<body>
+<h3>Javascript test</h3>
+<hr>
+<img src="img1-1.jpg"
+	onmouseover="this.src='img2.jpg'"
+	onmouseout="this.src='img1-1.jpg'">
+<hr>
+<script>
+function over(obj) {
+	obj.src = "img2.jpg";
+}
+function out(obj) {
+	obj.src = "img1-1.jpg";
+}
+</script>
+<img src="img1-1.jpg"
+	onmouseover="over(this)"
+	onmouseout="out(this)">
+<hr>
+<script src="lecture9-4.js"></script>
+<img src="img2.jpg"
+	onmouseover="jsover(this)"
+	onmouseout="jsout(this)">
+<hr>
+<a href="javascript:alert('클릭하신게 진짜 맞나요?')">클릭하세요.</a>
+</body>
+</html>

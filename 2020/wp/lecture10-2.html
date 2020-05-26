@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head><title>연산자</title></head>
+<body>
+<h3>논리 연산자</h3>
+<hr>
+<script>
+	var x=false, y=false;
+	document.write("[x="+x+", y="+y+"]<br>");
+	document.write("x AND y="+(x&&y)+"<br>");
+	document.write("x OR y="+(x||y)+"<br>");
+	document.write("NOT x="+(!x)+"<br>");
+	var x=true, y=false;
+	document.write("[x="+x+", y="+y+"]<br>");
+	document.write("x AND y="+(x&&y)+"<br>");
+	document.write("x OR y="+(x||y)+"<br>");
+	document.write("NOT x="+(!x)+"<br>");
+	var x=false, y=true;
+	document.write("[x="+x+", y="+y+"]<br>");
+	document.write("x AND y="+(x&&y)+"<br>");
+	document.write("x OR y="+(x||y)+"<br>");
+	document.write("NOT x="+(!x)+"<br>");
+	var x=true, y=true;
+	document.write("[x="+x+", y="+y+"]<br>");
+	document.write("x AND y="+(x&&y)+"<br>");
+	document.write("x OR y="+(x||y)+"<br>");
+	document.write("NOT x="+(!x)+"<br>");
+</script>
+<h3>조건 연산자</h3>
+<hr>
+<script>
+	var a=3, b=5;
+	document.write("big number of "+a+" and "+b+" is "+((a>b)?a:b)+".<br>");
+	document.write("difference of two number is "+((a>b)?a-b:b-a)+".<br>");
+</script>
+<h3>비트 연산자</h3>
+<hr>
+<script>
+function digit8(v) {
+	var str="";
+	for(i=0;i<8;i++) {
+		if(v&(0x80>>i)) str +="1";
+		else str+="0";
+	}
+	return str;
+}
+	var x=10, y=3;
+	document.write("<pre>");
+	document.write("x="+x+", y="+y+"<br>");
+	document.write("x="+digit8(x)+"<br>");
+	document.write("y="+digit8(y)+"<br>");
+	document.write("x and y="+digit8(x&y)+"<br>");
+	document.write("x or y="+digit8(x|y)+"<br>");
+	document.write("x xor y="+digit8(x^y)+"<br>");
+	document.write("x shift left 3="+digit8(x<<3)+"<br>");
+	document.write("x shift right 3="+digit8(x>>3)+"<br>");
+</script>
+<h3>문자열 연산</h3>
+<hr>
+<script>
+	document.write("한글"+31+"<br>");
+	var t = 51;
+	document.write("섹터 : "+t+"<br>");
+	document.write(1+2+3+"=6"+"<br>");
+	document.write("6="+1+2+3+"<br>");
+	document.write("pi="+3.141592+"<br>");
+	var name="kim";
+	document.write((name=="kim")+"<br>");
+	document.write((name>"lee")+"<br>");
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

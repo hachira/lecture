@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head><title>지역변수와 전역변수</title></head>
+<body>
+<h3>지역변수와 전역변수</h3>
+<hr>
+<script>
+var x=50;
+function foo() {	//	함수 foo() 선언
+	var x=1;	//	지역변수 x
+	document.write("지역변수 x="+x);
+	document.write("<br>");
+	document.write("전역변수 x="+this.x);
+	document.write("<hr>");
+	var oct=015;	//	8진수 15 = 10진수 13
+	var hex=0x15;
+	var condition=true;
+	document.write("8진수 015="+oct+"<br>");
+	document.write("16진수 0x15="+hex+"<br>");
+	document.write("condition="+condition+"<br>");
+	document.write('문자열 : 단일인용부호로도 표현'+"<br>");
+	document.write("그녀는 \"누구세요\"라고 했다.");
+	document.write("<hr>");
+	var x = 32;
+	var div = x/10;
+	var total = 100+x*3;
+	var mod = x%3;
+	document.write("x="+x+"<br>");
+	document.write("div="+div+"<br>");
+	document.write("total="+total+"<br>");
+	document.write("mod="+mod+"<br>");
+	document.write("<hr>");
+	a = 10; document.write("a++="+(a++)+"<br>");
+	a = 10; document.write("a--="+(a--)+"<br>");
+	a = 10; document.write("++a="+(++a)+"<br>");
+	a = 10; document.write("--a="+(--a)+"<br>");
+	document.write("<hr>");
+	//	대입연산자 테스트
+	var x=10, y=5; y=x; document.write("x="+x+", y="+y+"<br>");
+	var x=10, y=5; y+=x; document.write("x="+x+", y="+y+"<br>");
+	var x=10, y=5; y-=x; document.write("x="+x+", y="+y+"<br>");
+	var x=10, y=5; y*=x; document.write("x="+x+", y="+y+"<br>");
+	var x=10, y=5; y/=x; document.write("x="+x+", y="+y+"<br>");
+	document.write("<hr>");
+	//	비교연산
+	var a = 10, b = 11;
+	document.write("a="+a+", b="+b+"<br>");
+	document.write("a&gt;b="+(a>b)+"<br>");
+	document.write("a&lt;b="+(a<b)+"<br>");
+}
+
+foo();	//	함수 foo() 호출
+</script>
+</body>
+</html>

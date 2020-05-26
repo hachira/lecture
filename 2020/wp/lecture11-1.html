@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head><title>제어문</title></head>
+<body>
+<!--
+<h3>조건문</h3>
+<hr>
+<script>
+	var score = prompt("성적을 입력해주세요.", 100);
+	var grade;
+	score = parseInt(score);	// 문자열을 정수로 바꿈
+	if(score >= 90) grade="A";	//	90이상
+	else if(score >= 80) grade="B";	//	80이상 90미만
+	else if(score >= 70) grade="C";	//	70이상 80미만
+	else if(score >= 56) grade="D";	//	56이상 70미만
+	else grade="F";				//	56미만
+	document.write(score+"점은 "+grade+"입니다.<br>");
+</script>
+-->
+<!--
+<h3>스위치-케이스문</h3>
+<hr>
+<script>
+	var coffee = prompt("어떤 커피를 드릴까요?", "아메리카노");
+	var price=0;
+	switch(coffee) {
+		case "espresso":
+		case "에스프레소": price = 3500; break;
+		case "americano":
+		case "아메리카노": price = 4500; break;
+		case "cafe latte":
+		case "cafe au lait":
+		case "카페라떼": price = 5500; break;
+		default:
+			document.write(coffee+"란 음료는 메뉴에 없습니다.<br>");
+	}
+	if(price!=0) document.write(coffee+"는 "+price+"원입니다.<br>");
+</script>
+-->
+<h3>for문</h3>
+<hr>
+<script>
+	var n = prompt("숫자를 입력하세요 : ", 10);
+	n = parseInt(n);
+	var sum = 0;
+	for(var i=1; i<=n; i++) sum += i;
+	document.write("1부터 "+n+"까지의 합은 "+sum+"입니다.<br>");
+	for(var size=10;size<=35;size+=5) {
+		document.write("<span style='font-size: "+size+"px'>"+
+			size+"px</span>");
+	}
+	document.write("<br>");
+</script>
+</body>
+</html>

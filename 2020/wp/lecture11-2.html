@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head><title>Java script objects</title></head>
+<body>
+<h3>객체 생성 및 활용</h3>
+<hr>
+<script>
+	//	Date 객체 생성
+	var today = new Date();
+	
+	//	현재 시간 출력
+	document.write("현재 시간 : "+today.toLocaleString()+"<br>");
+	
+	//	String 객체 생성
+	var myStr = new String("동국대학교");
+	document.writeln("myStr 내용 :"+myStr+"<br>");
+	document.writeln("myStr 길이 : "+myStr.length+"<br>");
+</script>
+<h3>[]로 배열 만들기</h3>
+<hr>
+<script>
+	var plot=[20, 5, 8, 15, 20];
+	plot[5] = 10;
+	plot[10] = 11;
+	for(i=0;i<plot.length;i++) {
+		var size=plot[i];
+		while(size>0) {
+			document.write("*");
+			size--;
+		}
+		document.write(plot[i]+"<br>");
+	}
+</script>
+<h3>Array 객체로 배열 만들기</h3>
+<hr>
+<script>
+	var degrees=new Array();	//	Array 객체를 생성
+	degrees[0] = 15.1;
+	degrees[1] = 16.0;
+	degrees[2] = 17.0;
+	var sum = 0;
+	for(i=0;i<degrees.length;i++) sum += degrees[i];
+	document.write("평균 온도는 "+(sum/degrees.length).toFixed(2)+"입니다.<br>");
+</script>
+<h3>Array 객체의 메소드 활용</h3>
+<hr>
+<script>
+function pr(msg, arr) { document.write(msg+arr.toString()+"<br>"); }
+function hr() { document.write("<hr>"); }
+	var a = new Array("김", "이", "박", "최");
+	var b = new Array("송");
+	var c;
+	pr("배열 a = ", a);
+	pr("배열 b = ", b);
+	hr();
+	c = a.concat(b);
+	pr("배열 c = ", c);
+	c = a.join("-");
+	pr("배열 c = ", c);
+	c = a.reverse();
+	pr("배열 c = ", c);
+	pr("배열 a = ", a);
+	c = a.slice(1, 2);
+	pr("배열 c = ", c);
+	c = a.sort();
+	pr("배열 c = ", c);
+	pr("배열 a = ", a);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

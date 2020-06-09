@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><title>DOM Test</title></head>
+<body>
+<h3>DOM Test</h3>
+<hr>
+<p id="firstP" style="color:blue; background-color:yellow;"
+	onclick="this.style.color='red'">
+	안녕하세요. <span style="color:teal">최창락</span>입니다.
+</p>
+<script>
+var p = document.getElementById("firstP");
+var text = "id : "+p.id+"\n";
+text += "tag name : "+p.tagName+"\n";
+text += "inner HTML : "+p.innerHTML+"\n";
+alert(text);
+</script>
+</body>
+</html>

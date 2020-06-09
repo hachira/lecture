@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head><title>스타일 동적변경</title></head>
+<body>
+<h3>스타일 동적변경</h3>
+<hr>
+<script>
+function change() {
+	var span = document.getElementById("mySpan");
+	span.style.backgroundColor = "yellow";
+	span.style.fontSize = "30px";
+	span.style.border = "2px solid blue";
+	span.innerHTML = "<img src='img1-1.jpg'>";
+}
+function changediv(obj) {
+	obj.style.fontSize = "30px";
+	obj.style.color = "red";
+}
+</script>
+<p style="color:blue">이것은 
+<span id="mySpan" style="color:red">테스트</span>입니다.</p>
+<input type="button" value="스타일변경" onclick="change()">
+<hr>
+<div onclick="changediv(this)">
+안녕하세요.
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head><title>Lecture 12-2</title>
+<script>
+	//	3개의 함수 작성(메소드에 넣어줄 내용)
+	function inquiry() { return this.balance; }
+	function deposit(money) { this.balance+=money; return this.balance; }
+	function withdraw(money) { this.balance-=money; return this.balance; }
+	
+	//	사용자 객체 만들기 (비어있는 객체를 생성하고, 필요한 프로퍼티와 메소드 선언.)
+	var account = new Object();
+	account.owner = "창락";
+	account.code = "111-11-1-11111";
+	account.balance = 1000000000;
+	account.inquiry = inquiry;
+	account.deposit = deposit;
+	account.withdraw = withdraw;
+</script>
+</head>
+
+<body>
+<h3>new Object로 사용자 객체 만들기</h3>
+<hr>
+<script>
+	document.write("account : "+account.owner+"<br>");
+	document.write("  code : "+account.code+"<br>");
+	document.write("  balance : "+account.balance+"<br>");
+	
+	//	함수를 실행한다.
+	account.deposit(1000000000);
+	document.write("  balance : "+account.balance+"<br>");
+	account.withdraw(100);
+	document.write("  balance : "+account.inquiry()+"<br>");
+</script>
+</body>
+</html>	

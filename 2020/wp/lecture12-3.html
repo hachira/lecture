@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head><title>Lecture 12-3</title>
+<script>
+//	사용자 계정을 리터럴을 통해 생성
+var account={
+	owner : "창락", code : "111-12345", balance : 500000,
+	inquiry : function() { return this.balance; },
+	deposit : function(money) { this.balance+=money; },
+	withdraw : function(money) { this.balance-=money; }
+};
+</script>
+</head>
+<body>
+<h3>리터럴 표기법으로 사용자 객체 만들기</h3>
+<hr>
+<script>
+	document.write("account : "+account.owner+"<br>");
+	document.write("  code : "+account.code+"<br>");
+	document.write("  balance : "+account.balance+"<br>");
+	
+	//	함수를 실행한다.
+	account.deposit(1000000000);
+	document.write("  balance : "+account.balance+"<br>");
+	account.withdraw(100);
+	document.write("  balance : "+account.inquiry()+"<br>");
+</script>
+</body>
+</html>	

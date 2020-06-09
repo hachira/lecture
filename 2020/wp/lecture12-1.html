@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head><title>lecture 12-1</title></head>
+<body>
+<h3>Date 객체로 시간 표시</h3>
+<hr>
+<script>
+var now = new Date();	//	현재 시간으로 Date 객체 생성
+var month = [ "1월", "2월", "3월", "4월", "5월", "6월",
+	"7월", "8월", "9월", "10월", "11월", "12월" ];
+document.write("현재시간 : "+now.toUTCString()+"<br>");
+document.write(now.getFullYear()+"년도<br>");
+document.write(month[now.getMonth()]+"<br>");
+document.write(now.getDate()+"일<br>");
+
+//	방문한 분(minutes)이 짝수이면 보라색, 홀수이면 하늘색이 되도록 바꾼다.
+var bgColor = "lightskyblue";
+if(now.getMinutes()%2 == 0) bgColor = "violet";
+document.body.style.backgroundColor = bgColor;
+
+var next = new Date(2020, 6, 23, 15, 0, 0);
+document.write("기말고사 시험 : <strong>"+next.toLocaleString()+"</strong><br>");
+</script>
+<h3>String 객체로 문자열 표시</h3>
+<hr>
+<script>
+var a = "Boys and Girls";
+var b = "!!";
+document.write("a = "+a+", b = "+b+"<br>");
+document.write(a[0]+"<br>");
+document.write(a.concat(b, "입니다.")+"<br>");
+document.write(a.indexOf("s")+"<br>");
+document.write(a.indexOf("and")+"<br>");
+document.write(a.slice(5,8)+"<br>");
+document.write(a.replace("and", "or")+"<br>");
+//	a 문자열을 " "으로 분리
+var sub = a.split(" ");
+for(var i = 0; i < sub.length; i++) document.write("'"+sub[i]+"'");
+document.write("<br>");
+document.write("a = "+a+", b = "+b+"<br>");
+</script>
+<h3>Math를 이용한 구구단</h3>
+<script>
+//	1~9까지 숫자중 랜덤하게 한 숫자를 반환.
+function randomInt() { return Math.floor(Math.random()*9)+1; }
+//	구구단 문제 만들기
+var a = randomInt(), b = randomInt();
+var c = a*b;
+var user = prompt(a+"*"+b+"의 값은 얼마일까요?");
+if(user == null) {
+	document.write("구구단 연습이 취소되었습니다.");
+}
+else {
+	var ans = parseInt(user);
+	if(ans == c) {
+		document.write("정답입니다.");
+	} else {
+		document.write("틀렸습니다.  정답은 "+c+"입니다.");
+	}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

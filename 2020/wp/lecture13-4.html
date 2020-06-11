@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>get elements</title>
+<script>
+function change() {
+	var spanArray = document.getElementsByTagName("span");
+	for(var i=0; i<spanArray.length;i++) {
+		var span=spanArray[i];
+		span.style.backgroundColor="yellow";
+	}
+}
+function change2() {
+	var redArray = document.getElementsByClassName("red");
+	var n = redArray.length;
+	for(var i=0; i<n;i++) {
+		var red=redArray[i];
+		red.style.color="red";
+		red.style.fontSize = "20px";
+	}
+}
+</script>
+</head>
+<body>
+저는 빨간 <span class="red">사과</span>을 좋아하지 않아요.<br>
+저는 <span class="red">사과</span>외의 과일을 잘 먹어요.<br>
+저는 <span>바나나</span>같은 것은 잘 먹어요.<br>
+<hr>
+<input type="button" onclick="change()" value="색바꾸기">
+<input type="button" onclick="change2()" value="글자색바꾸기">
+</body>
+</html>

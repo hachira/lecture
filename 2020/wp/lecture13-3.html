@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>document property</title>
+<script>
+var text = "문서 로딩 중일 때 ready state " + 
+	document.readyState + "\n";
+</script>
+</head>
+<body onload="printProperties()">
+<h3>document property</h3>
+<hr>
+<a href="http://www.naver.com">네이버</a>
+<div>이곳은 div 영역입니다.</div>
+<input id="input" type="text" value="Focus Here.">
+<script>
+//	문서가 완전히 로드되었을 때, 현재 document의 프로퍼티 출력
+function printProperties() {
+	document.getElementById("input").focus();
+	text += "1. location = "+document.location + "\n";
+	text += "2. URL = "+ document.URL + "\n";
+	text += "3. title = " + document.title + "\n";
+	text += "4. domain = " + document.domain + "\n";
+	text += "5. lastModified = " + document.lastModified + "\n";
+	text += "6. defaultView = " + document.defaultView + "\n";
+	text += "7. referrer = " + document.referrer + "\n";
+	text += "8. activeElement = " + document.activeElement.value + "\n";
+	text += "문서 로딩 후의 ready state " + document.readyState;
+	alert(text);
+}
+</script>
+</body>
+</html>

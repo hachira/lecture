@@ -7,6 +7,8 @@ div class="area_view" 안의 내용을 단어별로 자르고,
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re
+import pandas as pd
+import matplotlib, matplotlib.pyplot as plt
 
 #  베이스 URL을 설정
 baseUrl = "https://sdev.tistory.com/"
@@ -18,13 +20,18 @@ links = { baseUrl }
 toVisit = [ baseUrl ]
 
 #   크롤링할 횟수 제한을 위해 remain 변수 선언
-remain = 10
+remain = 1000
 
 #   자주 쓰는 정규 표현식을 위해서 전처리
 wpattern = re.compile(r"\w+")
+dpattern = re.compile(r"\d+")
+epattern = re.compile(r"[a-zA-Z]+")
 
 #   wpattern에 의해서 수집된 단어들을 저장할 변수 선언
-words = [ ]
+words = { }
+stops = { "있습니다", "없습니다", "저작자표시비영리변경금지",
+          "같습니다", "공유하기", "페이스북", 
+          "것입니다", "그러므로", "아닙니다" }
 
 #   크롤링을 위한 while 루프
 while len(toVisit) > 0 and remain > 0:
@@ -75,5 +82,22 @@ while len(toVisit) > 0 and remain > 0:
     if len(divs)==0: continue
     for s in wpattern.findall(divs[0].text):
         if len(s) < 4: continue
-        words.append(s)
-    
+        if s in stops: continue
+        if dpattern.match(s): continue
+        if epattern.match(s): continue
+        if s in words: words[s] += 1
+        else: words[s] = 1
+
+#   위에서 얻어진 빈도 dictionary를 판다스 시리즈로 변환
+sr = pd.Series(words)
+
+#   matplotlib에서 한글을 쓰기 위해서 폰트를 수정하도록 하자
+plt.rc("font", family="gulim")
+
+#   그래프 그리기
+matplotlib.style.use("bmh")
+plt.figure(figsize=(10, 5))
+plt.plot(sr.sort_values(ascending=False)[:10])
+plt.xlabel("단어")
+plt.ylabel("빈도")
+plt.show()
